@@ -1,9 +1,9 @@
 var app = (function($) {
 	var self = {
-		debug: true,
+		environment: 'dev', // dev | staging | live
 
 		log: function(message) {
-			if ( self.debug && typeof console !== undefined ) { console.debug(message); }
+			if ( self.environment == 'dev' && typeof console.debug != 'undefined' ) { console.debug(message); }
 		},
 
 		init: function() {
