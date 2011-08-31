@@ -1,17 +1,17 @@
 var app = (function($) {
-	var self = {
+	var app = {
 		environment: 'dev', // dev | staging | live
 
 		log: function(message) {
-			if ( self.environment == 'dev' && typeof console.debug != 'undefined' ) { console.debug(message); }
+			if ( app.environment == 'dev' && typeof console.debug != 'undefined' ) { console.debug(message); }
 		},
 
 		init: function() {
-			self.log('Hello, world!');
+			app.log('Hello, world!');
 		}
 	}
 
-	$(function() { self.init(); });
+	$(function() { app.init(); });
 
-	return self;
+	return app;
 })(jQuery);
